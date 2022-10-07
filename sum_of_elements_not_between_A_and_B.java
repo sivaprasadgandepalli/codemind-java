@@ -1,10 +1,10 @@
 import java.util.*;
-class elementsearch
+class sum
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,c=0,a,b,sum=0;
+        int n,a,b,s=0,c=0;
         n=sc.nextInt();
         int x[]=new int[n];
         for(int i=0;i<n;i++)
@@ -13,15 +13,14 @@ class elementsearch
         }
         a=sc.nextInt();
         b=sc.nextInt();
-        for(int j=0;j<n;j++)
+        for(int i=0;i<n;i++)
         {
-            if(x[j]<a || x[j]>b)
+            c+=x[i];
+            if(x[i]<a||x[i]>b)
             {
-                sum+=x[j];
-                c++;
+                s=s+x[i];
             }
         }
-        System.out.println(sum);
-        
+        System.out.println(Math.abs(s));
     }
 }
