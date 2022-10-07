@@ -19,7 +19,6 @@ class elmsmascnt
         int n,k=0,s;
         n=sc.nextInt();
         int x[]=new int[n];
-        int y[]=new int[n];
         for(int i=0;i<n;i++)
         {
             x[i]=sc.nextInt();
