@@ -1,25 +1,26 @@
 import java.util.*;
-class average
+class avg
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,s=0,count=0;
+        int n,s=0,avg,k=0;
         n=sc.nextInt();
-        int arr[]=new int[n];
+        int x[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            x[i]=sc.nextInt();
+            s+=x[i];
+        }
+        avg=s/n;
         for(int j=0;j<n;j++)
         {
-            arr[j]=sc.nextInt();
-            s+=arr[j];
-        }
-        int avg=s/n+1;
-        for(int k=0;k<n;k++)
-        {
-            if(arr[k]<avg)
+            if(x[j]<=avg)
             {
-                count++;
+                k++;
             }
         }
-        System.out.println(count);
+        System.out.println(k);
+        
     }
 }
